@@ -1,38 +1,31 @@
+import java.util.Arrays
+
 fun main(){
-    var product = numbers(arrayOf(3,5,8,))
-    println(product)
-    var total = mixedtype(arrayOf("Catherine",50,54.0,true,40,39.0F,))
-    println(total)
-    var y = vowel(arrayOf('a','b','c','d','e','f'))
+    name("codehive")
+    var x = modulus(25,3)
+    println(x)
+    var y = nameage("Catherine",20)
     println(y)
-
+    var z = length("Akirachix")
+    println(z)
 
 }
-fun numbers(number:Array<Int>):Int{
-    var product = 1
-    number.forEach { num->
-        product*=num
-    }
-    return product
+fun name(num:String){
+    var x =num[4].toString()+num[5]+num[6]+num[7]
+    println(x)
 }
-fun mixedtype(mixedArray: Array<Any>):Number{
-    var sum = 0.0
-    mixedArray.forEach { number ->
-        if (number is Double|| number is Float) {
-            sum += number.toString().toDouble()
-        }
-    }
-    return sum
+fun modulus(a:Int,b:Int):Int{
+    var y = a%b
+    return y
 }
-fun vowel(number: Array<Char>):Int{
-    var count = 0
-    number.forEach { num->
-        if (num == 'a'||num=='e'||num=='i'||num=='o'||num=='u'){
-            ++count
-    }
+fun nameage(name:String,age:Int):String{
+    var x = "Hi my name is $name and i am $age years old"
+    return x
+}
+fun length(name:String):Int{
+    var size = name.length
+    return size
 
-    }
-   return count
 }
 
 
